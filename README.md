@@ -4,7 +4,7 @@ After analyzing the data, I built a target that defines if a transaction is like
 
 We can explore this idea further, but for now the pipeline will define the target through the single file made available, creates a pipeline with the structure to evolve into something robust, stores the model object and serves a prediction service through a REST api.
 
-The api is defined in the Dockerfile, that for the sake of simplicity, also performs the data engineering and model training processess before serving.
+The api is defined in the Dockerfile, that for the sake of simplicity, also performs the data engineering and model training processess before serving. This is a minimal demonstration of what we can accomplish through MLOps practices.
 
 ## Running the Project
 
@@ -35,7 +35,7 @@ you can access this [URL](http://localhost:8000/docs#/default/predict_predict_po
 
 Click Try it out, roll down a bit then click Execute. It will send the sample data and infer if the transaction was either a "revenge spending" event or not. It will be showed in the response body:
 
-![alt text](image.png)
+![alt text](/assets/fast_api_execute.png)
 
 Feel free to contact me and discuss it further.
 

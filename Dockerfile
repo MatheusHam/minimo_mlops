@@ -18,9 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 RUN python /data_engineering/prod_data_eng_pipeline.py
-COPY master_table.csv .
 RUN python /model_pipeline/prod_model_pipeline.py
-COPY pipeline.pkl .
 
 # Set the entry point command to run the pipeline
 EXPOSE 8000

@@ -1,3 +1,11 @@
+# Project Revenge Spending with Credit Cards
+
+After analyzing the data, I built a target that defines if a transaction is likely to be characterized as "Revenge Spending", the act of spending money with superfluous things considering their financial information available through the card. This is an example of how we could impact the customers by enhancing their experience with this knowledge.
+
+We can explore this idea further, but for now the pipeline will define the target through the single file made available, creates a pipeline with the structure to evolve into something robust, stores the model object and serves a prediction service through a REST api.
+
+The api is defined in the Dockerfile, that for the sake of simplicity, also performs the data engineering and model training processess before serving.
+
 ## Running the Project
 
 Docker is required.
@@ -12,20 +20,27 @@ then:
 make run
 ```
 
+Docker commands, in case you can't use make:
+```docker
+docker build --no-cache -t test .
+docker run -d --name app_container -p 8000:8000 test
+```
 This is a recipe to build and run your image exposing it to port 8000
 
+Go to your browser, if everything is running fine 
 
-Or you can build and run the application with docker CLI.
-```docker
-docker build -t model_app_im .
-docker run -d --name model_app -p 8000:8000 model_app_im
-```
+you can access this [URL](http://localhost:8000/docs#/default/predict_predict_post) to test out the model prediction route:
 
+![alt text](/assets/fast_api_root.png)
 
+Click Try it out, roll down a bit then click Execute. It will send the sample data and infer if the transaction was either a "revenge spending" event or not. It will be showed in the response body:
+
+![alt text](image.png)
+
+Feel free to contact me and discuss it further.
 
 ### The Minimal MLOps Ecosystem
 
-Here is a starting point design.
 
 ```mermaid
   graph TD;

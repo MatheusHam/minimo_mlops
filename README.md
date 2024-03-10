@@ -1,4 +1,4 @@
-# Project Revenge Spending with Credit Cards
+# Revenge Spending with Credit Cards
 
 After analyzing the data, I built a target that defines if a transaction is likely to be characterized as "Revenge Spending", the act of spending money with superfluous things considering their financial information available through the card. This is an example of how we could impact the customers by enhancing their experience with this knowledge.
 

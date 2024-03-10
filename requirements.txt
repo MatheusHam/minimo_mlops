@@ -1,0 +1,6 @@
+pandas
+numpy
+matplotlib
+feature_engine
+dirty_cat
+scikit-learn==1.4.1
